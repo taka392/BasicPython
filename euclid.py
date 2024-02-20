@@ -5,14 +5,15 @@ b = input("b の値を入力: ")
 
 
 
+
 def eulid(a,b):
+    r = 1
     if a < b:
         a, b = b, a
-    while b != 0:
-        q = a // b
+    while r != 0:
         r = a % b
-        a = b
-        b = r
+        a, b = b, r
+    return int(a)
     
 result = eulid(int(a),int(b))
-print("最大公約数は{}です。".format(a))
+print(f"最大公約数は{result}です。")

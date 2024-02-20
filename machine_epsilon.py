@@ -1,9 +1,8 @@
 # TODO
 
 
-epsilon=1
-while epsilon + 1 != 1:
+e=1
+while (e + 1) > 1:
+    e=e/2
     
-    epsilon=epsilon/2
-
-print(epsilon)
+print(e)

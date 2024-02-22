@@ -5,7 +5,6 @@ a = int(input("a の値を入力: "))
 b = int(input("b の値を入力: "))
 
 # TODO
-
 def euclid(a,b) -> int: # ユークリッドの互除法
     r = 1
     if a < b:

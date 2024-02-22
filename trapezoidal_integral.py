@@ -6,7 +6,7 @@ import math
 # -----------
 
 
-def trapezoidal_integral(f,a,b,n):
+def trapezoidal_integral(f,a=0,b=1,n=100):
     h = (b-a)/n
     S = 0
     for i in range(1,n+1): 

@@ -1,26 +1,30 @@
-a = input("aの値を入力: ")
-b = input("bの値を入力: ")
+import math
 
-# TODO
-
-def is_prime_num(number):
-    is_prime = True
-    if number == 1:
-        is_prime = False
+def is_prime_number(n: int) -> bool: # 素数を判定する関数
+    if n<=1:
+        return False
+    for i in range(2,math.isqrt(n)+1):
+            if n % i == 0:
+                return False
     else:
-        for i in range(2,int(number**0.5+1)):
-            if number % i == 0:
-                is_prime = False
+        return True
+    
+    
+        
+def natural_number() -> int: # 自然数を入力するまで入力を求める関数
+    while True:
+        try:
+            n = int(input("自然数を入力してください: "))
+            if n >= 0:
                 break
-    return print_number(is_prime,number)
+            else:
+                print("正しい形式で自然数を入力してください")
+        except ValueError:
+            print("ValueErrorが発生しました。int型で入力してください")
+    return n
+    
 
-def print_number(is_prime,number):
-    if is_prime == True:
-        print(f"{number}は素数です")
-    else:
-        print(f"{number}は素数ではありません")
 
-
-is_prime_num(int(a))
-is_prime_num(int(b))
-
+n = natural_number()
+result = is_prime_number(n)
+print(f"{n}は{"素数です"if result else "素数ではありません"}")

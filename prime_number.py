@@ -1,6 +1,6 @@
 import math
 
-def is_prime_number(n: int) -> bool:
+def is_prime_number(n: int) -> bool: # 素数を判定する関数
     if n<=1:
         return False
     for i in range(2,math.isqrt(n)+1):
@@ -11,7 +11,7 @@ def is_prime_number(n: int) -> bool:
     
     
         
-def natural_number() -> int:
+def natural_number() -> int: # 自然数を入力するまで入力を求める関数
     while True:
         try:
             n = int(input("自然数を入力してください: "))
